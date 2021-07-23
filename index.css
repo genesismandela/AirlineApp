@@ -7,12 +7,6 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	background-image: linear-gradient(
-		to right bottom,
-		rgba(212, 65, 65, 0.4),
-		rgba(239, 231, 240, 0.4),
-		rgba(99, 212, 65, 0.4)
-	);
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-size: 25px;
@@ -21,56 +15,200 @@ body {
 
 .container {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	background-image: url(airplane.jpg);
+	background-position: center;
+	background-size: cover;
 }
 
 .formContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	position: relative;
-	width: 100%;
-	max-width: 400px;
+
+	width: 100vw;
+	height: 100vh;
+
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(212, 65, 65, 0.4),
+		rgba(239, 231, 240, 0.4),
+		rgba(99, 212, 65, 0.4)
+	);
+	border-radius: 5px;
+}
+
+.form {
+	/* max-width: 400px; */
+	padding: 3rem;
 
 	display: flex;
 	flex-direction: column;
-
-	padding: 0.5rem;
-}
-
-.formContainer::after {
-	position: absolute;
-	top: -4px;
-	bottom: -4px;
-	left: -4px;
-	right: -4px;
-	background: linear-gradient(
-		to bottom,
-		rgba(99, 212, 65, 0.4),
-		rgba(212, 65, 65, 0.4)
-	);
-	content: '';
-	z-index: -1;
-	border-radius: 16px;
+	justify-content: center;
+	align-items: center;
 }
 
 .input,
-select,
-.btnBook {
+.select {
+	background-color: #ffffff88;
+	border: none;
+	border-radius: 5px;
+	color: white;
+}
+
+.input,
+.select {
 	padding: 1rem;
-	font-size: 1.6rem;
 	margin: 0.5rem;
+}
+
+input {
+	max-width: 350px;
+	width: 100%;
+	font-size: 1.25rem;
 }
 
 select {
 	cursor: pointer;
+	max-width: 350px;
+	width: 100%;
+	font-size: 1rem;
 }
 
 .btnBook {
 	color: rgba(0, 0, 0, 0.438);
-	margin: 1rem auto;
-	width: 30%;
 	border: none;
 	background-color: white;
 	border-radius: 5px;
 	cursor: pointer;
+	font-size: 1rem;
+	padding: 0.75rem;
 }
+
+.bookDone {
+	background-color: black;
+	border-radius: 5px;
+	color: white;
+
+	font-size: 1rem;
+	padding: 0.75rem;
+	max-width: 600px;
+	width: 75%;
+	position: absolute;
+	top: 1rem;
+	text-align: center;
+	display: none;
+
+	z-index: 9;
+
+	-webkit-animation: fadeIn 1.5s; /* Safari 4+ */
+	-moz-animation: fadeIn 1.5s; /* Fx 5+ */
+	-o-animation: fadeIn 1.5s; /* Opera 12+ */
+	animation: fadeIn 1.5s; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* .seeBooks {
+	position: absolute;
+	bottom: 1rem;
+}
+
+.seeBooks--btn {
+	background-color: transparent;
+	border: none;
+	text-decoration: underline;
+	cursor: pointer;
+} */
+
+/* .books {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	width: 100vw;
+
+	height: 100vh;
+
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(212, 65, 65, 0.4),
+		rgba(239, 231, 240, 0.4),
+		rgba(99, 212, 65, 0.4)
+	);
+}
+
+.books__headingBox {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	max-width: 750px;
+}
+
+.books__heading {
+	text-transform: uppercase;
+	padding-bottom: 0.5rem;
+	border-bottom: 3px solid red;
+}
+
+.books__infoBox {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	max-width: 1150px;
+	font-size: 1.2rem;
+	margin: 0 auto;
+}
+
+.books__infoBox--box {
+	width: 95%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+	margin: 0.5rem 0;
+}
+
+.books__info {
+	margin: 1rem;
+	width: 100vw;
+} */

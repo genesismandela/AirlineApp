@@ -9,48 +9,97 @@
 	</head>
 	<body>
 		<div class="container">
-			<form action="#" class="formContainer">
-				<input
-					type="text"
-					name="name"
-					id="name"
-					placeholder="Full name"
-					class="input"
-				/>
-				<input
-					type="email"
-					name="email"
-					id="email"
-					placeholder="Email address"
-					class="input"
-				/>
+			<div class="bookDone">
+				<p class="bookDone--text"></p>
+			</div>
+			<article class="formContainer">
+				<form action="#" class="form">
+					<input
+						type="text"
+						name="name"
+						id="name"
+						placeholder="Full name"
+						class="input"
+						required
+					/>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						placeholder="Email address"
+						class="input"
+						required
+					/>
 
-				<select
-					name="airline"
-					id="airline"
-					onchange="destinationValues()"
-				>
-					<option value="iberia" id="iberia">Iberia</option>
-					<option value="lufthansa" id="lufthansa">Lufthansa</option>
-					<option value="emirates" id="emirates">Emirates</option>
-				</select>
+					<select
+						name="airline"
+						id="airline"
+						class="select"
+						onchange="destinationValues()"
+					>
+						<option selected value="" id="">
+							Select your airline
+						</option>
+						<option value="Iberia" id="iberia">Iberia</option>
+						<option value="Lufthansa" id="lufthansa">
+							Lufthansa
+						</option>
+						<option value="Emirates" id="emirates">Emirates</option>
+					</select>
 
-				<select name="destination" id="#">
-					<option value="" id="destination1">Madrid</option>
-					<option value="" id="destination2">Barcelona</option>
-				</select>
+					<select name="destination" id="destination" class="select">
+						<option selected value="" id="">
+							Select your destination
+						</option>
+						<option value="" id="destination1"></option>
+						<option value="" id="destination2"></option>
+					</select>
+				</form>
 
-				<input type="submit" value="Book" class="btnBook" />
-			</form>
+				<button class="btnBook">Book flight</button>
+			</article>
 
 			<div class="bookContainer" style="display: none">
-				<h2 class="heading">Congratulations</h2>
-				<p>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					Illum facilis quisquam eius officia. Deleniti fugiat laborum
-					corrupti ipsam.
-				</p>
+				<p></p>
 			</div>
+
+			<!-- <div class="seeBooks">
+				<button class="seeBooks--btn" href="#">See all books</button>
+			</div> -->
+
+			<!-- <article class="books">
+				<div class="books__headingBox">
+					<h3 class="books__heading">Iberia</h3>
+					<h3 class="books__heading">Lufthansa</h3>
+					<h3 class="books__heading">Emirates</h3>
+				</div>
+				<div class="books__infoBox">
+					<ul class="books__infoBox--box">
+						<p class="books__index">1.</p>
+						<h6 class="books__info">Name:</h6>
+						<h6 class="books__info">Destination:</h6>
+						<h6 class="books__info">Flight number:</h6>
+					</ul>
+					<ul class="books__infoBox--box">
+						<p class="books__index">2.</p>
+						<h6 class="books__info">Name:</h6>
+						<h6 class="books__info">Destination:</h6>
+						<h6 class="books__info">Flight number:</h6>
+					</ul>
+					<ul class="books__infoBox--box">
+						<p class="books__index">3.</p>
+						<h6 class="books__info">Name:</h6>
+						<h6 class="books__info">Destination:</h6>
+						<h6 class="books__info">Flight number:</h6>
+					</ul>
+					<ul class="books__infoBox--box">
+						<p class="books__index">4.</p>
+						<h6 class="books__info">Name:</h6>
+						<h6 class="books__info">Destination:</h6>
+						<h6 class="books__info">Flight number:</h6>
+					</ul>
+				</div>
+			</article> -->
 		</div>
 	</body>
 	<script src="index.js"></script>
